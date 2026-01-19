@@ -10,17 +10,17 @@ public class CourseTest {
         Student s1 = new Student("Alice", 19);
         Student s2 = new Student("Bob", 20);
 
-        // Create a course
-        Course math = new Course("Math");
+        // Creating a course
+        Course course = new Course("Science");
 
-        // Add students to course
-        math.addStudent(s1);
-        math.addStudent(s2);
-        math.addStudent(s1); // duplicate, should not add again
+        // Adding students to course
+        course.addStudent(s1);
+        course.addStudent(s2);
+        course.addStudent(s1); // duplicating should not work
 
         // Print students in the course
-        System.out.println("Students in " + math.getCourseName() + ":");
-        for (Student s : math.getStudents()) {
+        System.out.println("Students enrolled in " + course.getCourseName() + ":");
+        for (Student s : course.getStudents()) {
             System.out.println("- " + s.getName());
         }
 
@@ -30,11 +30,11 @@ public class CourseTest {
         printStudentCourses(s2);
 
         // Remove a student
-        System.out.println("\nRemoving Alice from Math...");
-        math.removeStudent(s1);
+        System.out.println("\nRemoving Alice from course...");
+        course.removeStudent(s1);
 
-        System.out.println("Students in " + math.getCourseName() + " after removal:");
-        for (Student s : math.getStudents()) {
+        System.out.println("Students in " + course.getCourseName() + " after removal:");
+        for (Student s : course.getStudents()) {
             System.out.println("- " + s.getName());
         }
 
