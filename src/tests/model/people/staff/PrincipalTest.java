@@ -32,33 +32,33 @@ public class PrincipalTest {
         }
 
         // Create courses
-        Course math = new Course("Math");
-        Course science = new Course("Science");
+        Course course  = new Course("Math");
+        Course course1 = new Course("Science");
 
         // Enroll admitted students manually
         for (Student s : admitted) {
-            s.takeCourse(math);
-            s.takeCourse(science);
+            s.takeCourse(course);
+            s.takeCourse(course1);
         }
 
         // Print course enrollments
         System.out.println("\nStudents in Math:");
-        math.getStudents().forEach(s -> System.out.println("- " + s.getName()));
+        course.getStudents().forEach(s -> System.out.println("- " + s.getName()));
 
         System.out.println("\nStudents in Science:");
-        science.getStudents().forEach(s -> System.out.println("- " + s.getName()));
+        course1.getStudents().forEach(s -> System.out.println("- " + s.getName()));
 
-        // Expel a student
+        // Expelling a student
         System.out.println("\n--- Expelling a student ---");
         Student studentToExpel = admitted.getFirst();
-        principal.expelStudent(studentToExpel, math);
+        principal.expelStudent(studentToExpel, course);
 
-        // Verify updates
+        // Verifying updates
         System.out.println("\nAfter expulsion:");
-        System.out.println("Students under Principal:");
+        System.out.println("Student(s) left:");
         principal.getStudents().forEach(s -> System.out.println("- " + s.getName()));
 
         System.out.println("Students in Math:");
-        math.getStudents().forEach(s -> System.out.println("- " + s.getName()));
+        course.getStudents().forEach(s -> System.out.println("- " + s.getName()));
     }
 }

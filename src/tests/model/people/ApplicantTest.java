@@ -12,9 +12,10 @@ public class ApplicantTest {
         Applicant a2 = new Applicant("John Smith", 4);
         Applicant a3 = new Applicant("Alice Brown", 23);
 
-        testAdmission(a1, minAge, maxAge); // should pass
-        testAdmission(a2, minAge, maxAge); // should fail
-        testAdmission(a3, minAge, maxAge); // should fail
+        //Testing if the applicants can be admitted based on age
+        testAdmission(a1, minAge, maxAge);
+        testAdmission(a2, minAge, maxAge);
+        testAdmission(a3, minAge, maxAge);
     }
 
     private static void testAdmission(Applicant applicant, int minAge, int maxAge) {

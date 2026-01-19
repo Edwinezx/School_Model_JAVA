@@ -10,17 +10,17 @@ public class TeacherTest {
         Teacher teacher = new Teacher("Mr. Johnson", 35);
 
         // Create courses
-        Course math = new Course("Math");
-        Course science = new Course("Science");
-        Course history = new Course("History");
-        Course art = new Course("Art");
+        Course course = new Course("Math");
+        Course course1 = new Course("Science");
+        Course course2 = new Course("History");
+        Course course3 = new Course("Art");
 
         // Teacher teaches courses
         System.out.println("\n--- Assigning courses to teacher ---");
-        teacher.teachCourse(math);
-        teacher.teachCourse(science);
-        teacher.teachCourse(history);
-        teacher.teachCourse(art); // exceeds max, should not be added
+        teacher.teachCourse(course);
+        teacher.teachCourse(course1);
+        teacher.teachCourse(course2);
+        teacher.teachCourse(course3); // exceeds max, should not be added
 
         // Print courses the teacher teaches
         System.out.println("\nCourses taught by " + teacher.getName() + ":");

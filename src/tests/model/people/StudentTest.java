@@ -10,19 +10,19 @@ public class StudentTest {
         Student student = new Student("John Doe", 20);
 
         // Create courses
-        Course math = new Course("Math");
-        Course science = new Course("Science");
-        Course history = new Course("History");
-        Course art = new Course("Art");
+        Course course = new Course("Math");
+        Course course1 = new Course("Science");
+        Course course2 = new Course("History");
+        Course course3 = new Course("Art");
 
         // Enroll student in courses
-        student.takeCourse(math);
-        student.takeCourse(science);
-        student.takeCourse(history);
-        student.takeCourse(art); // should exceed MAX_COURSES
+        student.takeCourse(course);
+        student.takeCourse(course1);
+        student.takeCourse(course2);
+        student.takeCourse(course3); // should exceed MAX_COURSES
 
         printStudentCourses(student);
-        printCourseStudents(math);
+        printCourseStudents(course);
     }
 
     private static void printStudentCourses(Student student) {
